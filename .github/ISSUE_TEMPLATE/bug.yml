@@ -1,0 +1,71 @@
+name: Bug Report
+description: File a bug report
+title: "[Bug]: "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Before opening a bug report, please search for the behaviour in the existing issues.
+
+        ---
+
+        Thank you for taking the time to file a bug report. To address this bug as fast as possible, we need some information.
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      description: "Are you using macOS or Windows?"
+      options:
+        - macOS
+        - Windows
+        - Linux
+    validations:
+      required: true
+
+  - type: input
+    id: os
+    attributes:
+      label: Operating system version
+      description: "Which version of macOS or Windows are you using?"
+      placeholder: "macOS Sonoma 14.1.1 (23B81) | Windows 11 (23H2 22631.3296)"
+    validations:
+      required: true
+  - type: dropdown
+    id: arch
+    attributes:
+      label: System architecture
+      description: "Which system architecture are you using?"
+      options:
+        - Intel (x86)
+        - ARM64 (M1, M2, etc)
+        - Windows
+    validations:
+      required: true
+  - type: input
+    id: polyscope_version
+    attributes:
+      label: PolyScope Version
+      description: "Please provide the installed Herd PolyScope. You can find via the menubar PolyScope > About."
+      placeholder: "1.0.0"
+    validations:
+      required: true
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: Bug description
+      description: What happened and what did you expect to happen?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Which steps do we need to take to reproduce this error?
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log output
+      description: If applicable, provide relevant log output. You can find server logs via the menubar Help > Server Logs.
+      render: shell
