@@ -1,4 +1,4 @@
-# PolyScope
+# Polyscope
 
 Run a team of coding agents in parallel, right on your Mac.
 
